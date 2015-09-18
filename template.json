@@ -3,10 +3,6 @@
       "name": "natx/debian-testing-amd64-gnome",
       "vcs": true
     },
-    "variables": {
-        "atlas_username": "{{env `ATLAS_USERNAME`}}",
-        "atlas_name": "{{env `ATLAS_NAME`}}"
-    },
     "provisioners": [
         {
             "type": "shell",
@@ -70,7 +66,7 @@
         {
             "type": "atlas",
             "only": ["virtualbox-iso"],
-            "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+            "artifact": "natx/debian-testing-amd64-gnome",
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
