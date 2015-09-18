@@ -1,6 +1,6 @@
 {
     "push": {
-      "name": "debian-testing-gnome",
+      "name": "natx/debian-testing-amd64-gnome",
       "vcs": true
     },
     "variables": {
