@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Bail if we are not running inside VirtualBox.
-if [[ `facter virtual` != "virtualbox" ]]; then
+if [[ `dmidecode -s system-product-name` != "VirtualBox" ]]; then
     exit 0
 fi
 
+echo 'Setting up VirtualBox Guest additions'
 mkdir -p /mnt/virtualbox
 mount -o loop /home/vagrant/VBoxGuest*.iso /mnt/virtualbox
 sh /mnt/virtualbox/VBoxLinuxAdditions.run
