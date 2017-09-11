@@ -1,6 +1,6 @@
 {
     "variables": {
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "push": {
       "name": "natx/debian-stretch-amd64-desktop",
@@ -14,6 +14,7 @@
                 "scripts/vagrant.sh",
                 "scripts/virtualbox.sh",
                 "scripts/dep.sh",
+                "scripts/upgrade.sh",
                 "scripts/cleanup.sh",
                 "scripts/zerodisk.sh"
             ],
