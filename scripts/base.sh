@@ -22,4 +22,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
+rm /etc/apt/apt.conf.d/20auto-upgrades
+rm /etc/apt/apt.conf.d/50unattended-upgrades
+
 update-grub

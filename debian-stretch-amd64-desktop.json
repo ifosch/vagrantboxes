@@ -1,6 +1,7 @@
 {
     "variables": {
-        "version": "0.0.2"
+        "version": "0.0.5",
+        "guest_additions_version": "5.1.28"
     },
     "push": {
       "name": "natx/debian-stretch-amd64-desktop",
@@ -58,6 +59,7 @@
             "ssh_port": 22,
             "ssh_wait_timeout": "14400s",
             "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
+            "guest_additions_url": "http://download.virtualbox.org/virtualbox/{{user `guest_additions_version`}}/VBoxGuestAdditions_{{user `guest_additions_version`}}.iso",
             "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
             "virtualbox_version_file": ".vbox_version"
         }
