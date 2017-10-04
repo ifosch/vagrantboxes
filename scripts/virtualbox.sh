@@ -6,6 +6,7 @@ if [[ `dmidecode -s system-product-name` != "VirtualBox" ]]; then
 fi
 
 echo 'Setting up VirtualBox Guest additions'
+apt-get install -y linux-headers-$(uname -r)
 mkdir -p /mnt/virtualbox
 mount -o loop /home/vagrant/VBoxGuest*.iso /mnt/virtualbox
 sh /mnt/virtualbox/VBoxLinuxAdditions.run

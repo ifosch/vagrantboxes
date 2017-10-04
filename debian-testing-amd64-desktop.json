@@ -1,6 +1,6 @@
 {
     "variables": {
-        "version": "0.0.2"
+        "version": "0.0.6"
     },
     "push": {
       "name": "natx/debian-testing-amd64-desktop",
@@ -12,10 +12,11 @@
             "scripts": [
                 "scripts/base.sh",
                 "scripts/vagrant.sh",
-                "scripts/virtualbox.sh",
                 "scripts/dep.sh",
                 "scripts/upgrade.sh",
                 "scripts/dist-upgrade.sh",
+                "scripts/reboot.sh",
+                "scripts/virtualbox.sh",
                 "scripts/cleanup.sh",
                 "scripts/zerodisk.sh"
             ],
@@ -59,6 +60,7 @@
             "ssh_port": 22,
             "ssh_wait_timeout": "14400s",
             "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
+            "guest_additions_url": "http://download.virtualbox.org/virtualbox/5.1.28/VBoxGuestAdditions_5.1.28.iso",
             "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
             "virtualbox_version_file": ".vbox_version"
         }
